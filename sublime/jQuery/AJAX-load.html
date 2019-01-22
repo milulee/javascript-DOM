@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AJAX的load()</title>
+    <link rel="stylesheet" href="">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <style>
+    	*{
+       		padding: 0;
+    	}
+    </style>
+</head>
+
+<body>
+	<script>
+		jQuery(document).ready(function($) {
+			$("button").click(function(){
+				$("p").load("/try/ajax/demo_test.txt")
+			})
+		});
+	</script>
+
+	<h2>使用jQuery AJAX修改文本内容</h2>
+	<button>获取外部内容</button>
+</body>
+
+</html>

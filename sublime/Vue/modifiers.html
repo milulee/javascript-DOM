@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Modifiers</title>
+	<link rel="stylesheet" href="">
+	<script src='vue.js'></script>
+</head>
+<body>
+    <div id="app" @click="clickme">
+        <section id="section" @click.stop="clickme">
+<!--          <section id="section" @click.capture="clickme"> -->
+            <div id="div" @click.prevent="clickme">
+                <span id="span" @click.self="clickme">
+                    <p id="p" @click.once="clickme">
+                        用鼠标双击我，看看事件的传递真正顺序。
+                    </p>
+                </span>
+            </div>
+        </section>
+        点击事件的响应顺序如下：{{message}}
+    </div>
+
+
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+          message: ''
+        },
+        methods: {
+          clickme: function (event) {
+            if (this.message === '') {
+                this.message = event.currentTarget.id
+            } else {
+                this.message = this.message + '->' + event.currentTarget.id
+            }
+          }
+        }
+    })
+</script>
+</body>
+
+</html>

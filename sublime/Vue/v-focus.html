@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>自定义指令</title>
+	<link rel="stylesheet" href="">
+	<script src="vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<p>页面载入时，input 元素自动获取焦点:</p>
+		<input type="text" v-focus>
+	</div>
+	<script>
+		Vue.directive("focus",{
+			inserted:function(el){
+				el.focus()
+				el.value="please type"
+			}
+		})
+
+		//创建根实例
+		new Vue({
+		
+			el: "#app"
+		
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Prevent修饰符</title>
+    <link rel="stylesheet" href="">
+    <script src="vue.js"></script>
+</head>
+
+<body>
+    <div id="demo" @click="clickme">
+<!--         <a id="a" href="/#" @click.self.prevent="clickme"> -->
+        <a id="a" href="/#" @click.prevent.self="clickme">
+			<span id="span" @click="clickme">点击我</span>
+		</a>
+        触发了哪些事件：{{message}}
+    </div>
+    <script>
+    var vm = new Vue({
+
+        el: "#demo",
+        data: {
+            message: ""
+        },
+        methods: {
+            clickme: function(event) {
+                if (this.message === '') {
+                    this.message = event.currentTarget.id
+                } else {
+                    this.message = this.message + '->' + event.currentTarget.id
+                }
+            }
+        }
+
+    })
+    </script>
+</body>
+
+</html>

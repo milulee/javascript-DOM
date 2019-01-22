@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Show=!Show</title>
+    <link rel="stylesheet" href="">
+    <script src="vue.js"></script>
+    <style>
+    /* 可以设置不同的进入和离开动画 */
+    /* 设置持续时间和动画函数 */
+    /*   .fade-enter-active,
+    .fade-leave-active {
+        transition: opacity 2s
+    }
+
+    .fade-enter,
+    .fade-leave-to
+
+    /* .fade-leave-active, 2.1.8 版本以下 */
+/*        {
+        opacity: 0
+    }
+*/
+
+
+    /* 可以设置不同的进入和离开动画 */
+    /* 设置持续时间和动画函数 */
+/*    .slide-fade-enter-active {
+        transition: all .3s ease;
+    }
+
+    .slide-fade-leave-active {
+        transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+    }
+
+    .slide-fade-enter,
+    .slide-fade-leave-to
+
+    /* .slide-fade-leave-active 用于 2.1.8 以下版本 */
+/*        {
+        transform: translateX(10px);
+        opacity: 0;
+    }*/
+	.slide-fade-enter-active {
+		animation: bounce-in 1s;
+	}
+	.slide-fade-leave-active {
+		animation: bounce-in .5s reverse;
+	}
+	@keyframes bounce-in {
+		0% {
+			transform: scale(0);
+		}
+		50% {
+			transform: scale(1.5);
+		}
+		100% {
+			transform: scale(1);
+		}
+	}
+	#app {
+		margin: 100px;auto;
+	}
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <button @click="show=!show">点我</button>
+        <transition name="slide-fade">
+            <p v-show="show" :style="styleobj">逐渐消失/出现</p>
+        </transition>
+    </div>
+    <script>
+    var vm = new Vue({
+
+        el: "#app",
+        data: {
+            show: true,
+            styleobj: {
+                fontSize: '30px',
+                color: "red"
+            },
+            methods: {
+
+            }
+        }
+
+    })
+    </script>
+</body>
+
+</html>

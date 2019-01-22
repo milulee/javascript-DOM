@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vue 测试实例 - 菜鸟教程(runoob.com)</title>
+<script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+</head>
+<body>
+<div id = "databinding"></div>
+<script type = "text/javascript">
+var vm = new Vue({
+	el: '#databinding',
+	data: {
+	},
+	methods : {
+	},
+});
+// 定义一个混入对象
+var myMixin = {
+	created: function () {
+		this.startmixin()
+	},
+	methods: {
+		startmixin: function () {
+			document.write("欢迎来到混入实例");
+		}
+	}
+};
+var Component = Vue.extend({
+	mixins: [myMixin]
+})
+var component = new Component();
+</script>
+</body>
+</html>
