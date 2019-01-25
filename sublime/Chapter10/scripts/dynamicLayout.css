@@ -1,0 +1,24 @@
+
+#slideshow {
+	height: 100px;
+	width: 100px;
+	position: relative;
+	overflow: hidden;
+	border: solid #ccc 2px;
+	float: left;
+	margin-left: 50px;
+}
+#preview {
+	position: absolute;
+}
+#linklist {
+	float: left;
+
+}
+#linklist a {
+	text-decoration: none;
+	color: green;
+}
+#linklist a:hover {
+	color: gray;
+}
