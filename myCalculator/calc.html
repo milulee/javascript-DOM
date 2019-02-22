@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Calculator</title>
+	<link rel="stylesheet" href="layout/calc.css">
+</head>
+<body>
+	<div class="errorHint" id="errorHint"><img src="https://github.com/crystalYY/calculator/blob/master/img/error.png?raw=true"></div>
+<!-- 	<div class="history">
+		<h2>Calculate History</h2>
+		<div id="history"></div>
+	</div> -->
+	<table>
+		<tr>
+			<th colspan="5">Calculator</th>
+		</tr>
+		<tr>
+			<td colspan="5"><input type="text" value="0" autocomplete="off"></td>
+		</tr>
+		<tr>
+			<td><button>7</button></td>
+			<td><button>8</button></td>
+			<td><button>9</button></td>
+			<td><button class='setChange' id='backSpace'>Delete</button></td>
+			<td><button class='setChange' id='clearNum'>C</button></td>
+		</tr>
+		<tr>
+			<td><button>4</button></td>
+			<td><button>5</button></td>
+			<td><button>6</button></td>
+			<td><button>+</button></td>
+			<td><button>-</button></td>
+		</tr>
+		<tr>
+			<td><button>1</button></td>
+			<td><button>2</button></td>
+			<td><button>3</button></td>
+			<td><button>*</button></td>
+			<td><button>/</button></td>
+		</tr>
+		<tr>
+			<td><button>0</button></td>
+			<td><button>.</button></td>
+			<td colspan="3"><button class='setChange'>Enter</button></td>
+		</tr>
+	</table>
+	<script src="scripts/eval.js"></script>
+</body>
+</html>
