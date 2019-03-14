@@ -1,0 +1,75 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.errorHint{
+	position: absolute;
+	left: 100px;
+	top: -282px;
+}
+.showError{
+	border: 2px solid red;
+}
+/*.main {
+	width: 900px;
+	height: 300px;
+	display: flex;
+}*/
+.history{
+	position: absolute;
+	right: 50px;
+	width: 250px;
+	height: 295px;
+	top: 150px;
+	border: 2px solid #992353;
+	border-radius: 5px;
+	overflow: scroll;
+}
+.history h2{
+	font-size: 20px;
+	color: #845645;
+}
+
+table {
+	width: 550px;
+	border: 2px solid #992356;
+	font-family: "Microsoft yahei";
+	background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1550124120374&di=943c01f887740b01e7c36bff0c4aaafe&imgtype=0&src=http%3A%2F%2Fimg.xinxic.com%2Fimg%2Fadca4bb2387ecf00.jpg);
+	background-size: 100% 100%;
+	margin: 150px auto;
+	padding: 10px;
+
+}
+table th {
+	font-size: 18px;
+	color: #845645;
+}
+table td{
+	height: 40px;
+	width: 100px;
+	padding-left: 2px;
+	padding-bottom: 2px;
+	text-align: center;
+}
+table tr button{
+	font-size: 16px;
+	background: none;
+	width: 98%;
+	height: 98%;
+	border: 1px solid #845612;
+	border-radius: 5px;
+	color: #845652;
+	cursor: pointer;
+}
+
+
+table td input{
+	width: 100%;
+	box-sizing: border-box;
+	font-size: 16px;
+	height: 40px;
+	text-align: right;
+	margin: 10px 0;
+	padding: 5px;
+	border: 1px solid #992356;
+}
