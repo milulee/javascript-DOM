@@ -29,6 +29,11 @@ body {
 	right: 20px;
 	top: 100px;
 }
+
+div#time {
+	height: 60px;
+}
+
 button {
 	width: 100px;
 	height: 35px;

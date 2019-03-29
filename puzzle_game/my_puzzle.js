@@ -82,13 +82,16 @@ function move(id) {
         }
     }
     getById("pause").className = "";
-
+    pause=true;
     getById("pause").innerHTML = "Congratulation!";
 }
 //定义计时函数
 function timer() {
-    // body... 
-    time += 1;
+    // body...    
+
+    if(!pause){
+            time += 1;
+    }
     let min = parseInt(time / 60);
     let sec = time % 60;
     getById("timer").innerHTML = `${min} 分 ${sec} 秒`;
@@ -100,7 +103,7 @@ function start() {
     if (pause) {
         getById('start').innerHTML = "暂停";
         pause = false;
-        set_timer = setInterval("timer()", 100);
+        set_timer = setInterval("timer()", 1000);
         getById("pause").className = "noDisplay";
 
     } else {
@@ -130,7 +133,29 @@ function random_d() {
         d[to] = d[z];
         d[z] = temp;
     }
+    if(getReverse()%2!==0){
+        random_d();
+    }
 
+}
+
+//一个统计逆序数的函数
+function getReverse(){
+    let arr=d.concat();
+    arr.shift();
+    let ind_0=arr.indexOf(0);
+    arr.splice(ind_0, 1);
+    console.log(arr);
+    let result=0;
+    for (let i = 1; i < arr.length; i++) {
+        for (let j = 0; j < i; j++) {
+            if(arr[j]>arr[i]){
+                result++;
+            }
+        }
+    }
+    console.log(result);
+    return result;
 }
 
 //输入要移动的小方块编码以及目标位置编码
